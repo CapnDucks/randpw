@@ -5,6 +5,6 @@
 # Sept 2018 v.01
 for i in {1..5}; do
   LENGTH=${1:-18}
-  PASS=$(LC_CTYPE=C tr -dc '\41\43\44\45\46\50-\176' < /dev/urandom | head -c 18 | xargs )
+  PASS=$(LC_CTYPE=C tr -dc '\41\43\44\45\46\50-\176' < /dev/urandom | head -c $LENGTH | xargs )
   echo "$PASS"
 done
